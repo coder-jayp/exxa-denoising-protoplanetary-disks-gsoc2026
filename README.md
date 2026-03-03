@@ -193,13 +193,13 @@ Input (1×600×600)
                     Output (1×600×600)
 ```
 
-**1,162,999 parameters · 4.44 MB · 4× spatial compression (600→150)**
+**1,162,999 parameters · 4× spatial compression (600→150)**
 
 ### Architecture Components
 
 **Residual Blocks** (`output = F(x) + x`): Enable stable gradient flow through
 deep networks. LeakyReLU (α=0.2) preserves gradients in sparse astronomical data
-where standard ReLU dies in low-activation regions.
+where standard ReLU produces no gradients in low-activation regions.
 
 **Squeeze-Excitation Blocks**: Learn which feature channels are important per
 input — some channels encode radial ring structure, others encode azimuthal
